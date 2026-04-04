@@ -16,6 +16,21 @@
     
   });
 
+  console.log("Comandos finalizados!");
 
+// Redirecionar para uma nova página
+window.location.href = "outrapag.html";
+
+var botao = document.getElementById("tiposVinhos");
+  botao.addEventListener("click", function() {
+  const tipovinho = [
+    {
+    pergunta: "Qual seria o tipo de vinho?",
+    alternativas: ["Tinto", "Branco", "Rosé"],
+    },
+    ]});
+
+    
+    console.log("Alternativas: " + tipovinho[0].alternativas.join(", "));
 
 
