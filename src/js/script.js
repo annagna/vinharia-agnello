@@ -1,36 +1,58 @@
+// 1. Primeiro declaramos o botão que está no HTML
+const botao = document.getElementById("meuBotao");
 
-  var botao = document.getElementById("meuBotao");
-  botao.addEventListener("click", function() {
-    var Nome = prompt('Digite seu nome: ');
-    var Sobrenome = prompt('Digite seu sobrenome: ');
-    var Email = prompt('Digite seu email: ');
-        if (Email === null || Email.trim() === '') {
-            alert('Email não inserido, favor colocar um email válido.');
-            return;
-        } else if (!Email.includes('@') || !Email.includes('.')) {
-            alert('Email inválido, favor colocar um email válido.');
-            return;
-        } else {
-            alert("Cadastro realizado com sucesso! Bem-vindo," + Nome + "!");
-        }
+// 2. Adicionamos um único evento de clique
+botao.addEventListener("click", function () {
     
-  });
+    // ETAPA 1: Pegar os dados do formulário HTML
+    const nome = document.getElementById("nome").value.trim();
+    const sobrenome = document.getElementById("sobrenome").value.trim();
+    const email = document.getElementById("email").value.trim();
 
-  console.log("Comandos finalizados!");
+    // Validações básicas do formulário
+    if (!nome || !sobrenome || !email) {
+        alert("Preencha todos os campos do formulário!");
+        return; // Para o código aqui se faltar algo
+    }
 
-// Redirecionar para uma nova página
-window.location.href = "outrapag.html";
+    if (!email.includes("@")) {
+        alert("E-mail inválido!");
+        return; // Para o código aqui se o e-mail estiver errado
+    }
 
-var botao = document.getElementById("tiposVinhos");
-  botao.addEventListener("click", function() {
-  const tipovinho = [
-    {
-    pergunta: "Qual seria o tipo de vinho?",
-    alternativas: ["Tinto", "Branco", "Rosé"],
-    },
-    ]});
+    // Alerta de boas-vindas
+    alert("Cadastro realizado com sucesso! Bem-vindo, " + nome + "!");
 
+
+    // ETAPA 2: Solicitar as informações do produto via prompt
+    const nomeProduto = prompt("Digite o nome do produto comercial:");
+    const tipoProduto = prompt("Digite o tipo do produto:");
+    const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
+    const quantidade = prompt("Digite a quantidade em estoque:");
+
+    // Validação dos prompts: impede que continue se algum campo estiver vazio
+    if (!nomeProduto || !tipoProduto || !safraOuAno || !quantidade) {
+        alert("Todos os campos do produto são obrigatórios! Tente novamente.");
+        return;
+    }
+
+    // Alerta antes de exibir no console
+    alert("A seguir, veja os detalhes do produto no console.");
+
+
+    // ETAPA 3: Exibindo tudo no console de forma organizada
+    console.log("==============================");
+    console.log("      DADOS DO USUÁRIO        ");
+    console.log("==============================");
+    console.log(`👤 Nome Completo: ${nome} ${sobrenome}`);
+    console.log(`📧 E-mail:        ${email}`);
     
-    console.log("Alternativas: " + tipovinho[0].alternativas.join(", "));
-
-
+    console.log("\n==============================");
+    console.log("    DETALHES DO PRODUTO       ");
+    console.log("==============================");
+    console.log(`📋 Nome:        ${nomeProduto}`);
+    console.log(`🎨 Tipo:        ${tipoProduto}`);
+    console.log(`📅 Ano/Safra:   ${safraOuAno}`);
+    console.log(`📦 Estoque:     ${quantidade} unidade(s)`);
+    console.log("==============================");
+});

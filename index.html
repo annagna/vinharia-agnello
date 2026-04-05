@@ -1,20 +1,49 @@
- HEAD
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinheria Agrello</title>
+    <title>Cadastro e Interação</title>
+    <style>
+        /* Um CSS básico só para simular o efeito de troca de páginas */
+        #pagina2 {
+            display: none; /* Começa escondida */
+        }
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1 text-align: center> Vinícola Agrello </h1>
-    <a href='script.js'>Fazer cadastro</a>    
 
-    
-<button id="meuBotao">Clique aqui</button>
+    <div id="pagina1">
+        <h2>Cadastro</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
 
-<script src="src/js/script.js"></script>
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
 
-</body> 
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="exemplo@email.com">
+
+        <button id="meuBotao">Cadastrar</button>
+    </div>
+
+    <div id="pagina2">
+        <h2>Área do Usuário</h2>
+        <p>Clique nos botões abaixo para interagir:</p>
+        
+        <div id="botoes"></div>
+
+
+    <script src="src/js/script.js"></script>
+</body>
 </html>
