@@ -1,0 +1,132 @@
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*fonte padrao do site*/
+    background: linear-gradient(135deg, #2b0a0a, #6b0f1a); /*fundo degrade vinho*/
+    color: #333;
+    display: flex;
+    justify-content: center; /*centraliza o conteudo horizontal e vertical*/
+    align-items: center;
+    height: 100vh;
+}
+
+/* CAIXA PRINCIPAL (PÁGINA 1 E PÁGINA 2) */
+#pagina1, #pagina2 {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /*sombra*/
+    text-align: center; /*texto centralizado*/
+}
+
+/* PÁGINA PROMPT */
+#paginaPrompt {
+    display: none; /* Começa escondida */
+    background-color: #7b1e25; /* fundo Vermelho Vinho */
+    color: white;/*cor do texto*/
+    padding: 40px; 
+    border-radius: 15px;
+    text-align: center;
+    width: 400px; /*largura*/
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /*sombra*/
+}
+#paginaPrompt h1 {
+    color: white;
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    font-weight: 700; /*negrito*/
+}
+#paginaPrompt h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.4; /*espacamento entre as linhas*/
+}
+#paginaPrompt p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+/* PÁGINA 2 */
+#pagina2 {
+    display: none; /*fprimeiro escondida*/
+}
+
+/* TÍTULOS */
+h2 {
+    color: #6b0f1a;
+    margin-bottom: 20px;
+}
+
+/* LABELS E INPUTS */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #a71d31;
+    outline: none;
+    box-shadow: 0 0 5px rgba(167, 29, 49, 0.5);
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6b0f1a, #a71d31);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a71d31, #6b0f1a);
+    transform: scale(1.05);
+}
+/* ESTILO DA ANIMAÇÃO DE VINHO */
+.vinho-animacao {
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.vinho-animacao img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.vinho-animacao img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+#pagina2 h2 {
+    font-size: 24px;
+    color: #7b1e25;
+}
