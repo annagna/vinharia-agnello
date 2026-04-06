@@ -35,7 +35,7 @@ h1 {
 
 /* Barra de texto horizontal abaixo do título */
 .about-bar {
-    background-color:  #b13939; /* Cor laranja conforme a marcação na imagem */
+    background-color:  #b13939; 
     width: 100%;
     padding: 25px;
     border-radius: 4px;
@@ -59,7 +59,7 @@ main {
 /* Imagem à esquerda da box de cadastro */
 .image-container {
     flex: 1;
-    background-color:  #4a0e0e; /* Cor laranja conforme a marcação na imagem */
+    background-color:  #4a0e0e; 
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -73,7 +73,7 @@ main {
     color: white;
     font-weight: bold;
 }
-/* Regra para a imagem não ficar enorme */
+
 .image-container img {
     max-width: 90%; /* Garante que a imagem não ultrapasse a largura do container */
     max-height: 100%; /* Garante que a imagem não ultrapasse a altura do container */
