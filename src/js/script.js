@@ -55,6 +55,7 @@ botao.addEventListener('submit', function (event) {
     console.log(`📅 Ano/Safra:   ${safraOuAno}`);
     console.log(`📦 Estoque:     ${quantidade} unidade(s)`);
     console.log("==============================");
+
     // document.getElementById("pagina1").style.display = "none";
     // document.getElementById("pagina2").style.display = "block";
 
