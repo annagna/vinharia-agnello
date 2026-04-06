@@ -40,8 +40,8 @@ botao.addEventListener("click", function () {
     // ETAPA 2: Solicitar as informações do produto via prompt
     // Usamos setTimeout para garantir que a tela mude antes do prompt travar
     setTimeout(function() {
-    const nomeProduto = prompt("Digite o nome do produto comercial:");
-    const tipoProduto = prompt("Digite o tipo do produto:");
+    const nomeProduto = prompt("Digite o nome do vinho:");
+    const tipoProduto = prompt("Digite o tipo do vinho:");
     const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
     const quantidade = prompt("Digite a quantidade em estoque:");
 
