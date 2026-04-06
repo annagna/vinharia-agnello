@@ -25,8 +25,8 @@ botao.addEventListener('submit', function (event) {
 
 
     // ETAPA 2: Solicitar as informações do produto via prompt
-    const nomeProduto = prompt("Digite o nome do vinho:");
-    const tipoProduto = prompt("Digite o tipo do vinho(Tinto, Branco, Rosé):");
+    const nomeProduto = prompt("Digite o nome do rótulo do vinho:");
+    const tipoProduto = prompt("Digite o tipo do vinho(Tinto, Branco ou Rosé):");
     const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
     const quantidade = prompt("Digite a quantidade em estoque:");
 
