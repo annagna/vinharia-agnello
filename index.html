@@ -5,69 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Site da Vinhearia Agnello</title>
-    <style>
-        /* Estilo básico para organizar a visualização */
-        body {
-            font-family: sans-serif;
-            padding: 0px;
-            margin: 0px;
-        }
-        .campo {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input {
-            padding: 8px;
-            width: 250px;
-        }
-        button {
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-    </style>
-    <link rel="stylesheet" href="src/src/css/style.css">
+
+     <link rel="stylesheet" href="src/css/style.css">
+
 </head>
 <body>
-    <h1 style="text-align: center;">Vinheria Agnello!</h1>
-    <div id="pagina1">
-        <h2 style="text-align: center;"> Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca. 
+   
+   <header>
+        <h1>VINHARIA AGNELLO!</h1>
+        <div class="about-bar">
+             <p> Fundada em São Paulo há mais de 15 anos, a Vinheria Agnello é uma empresa familiar dirigida pelo proprietário Giulio e sua filha Bianca. 
         Contando com uma loja física que dispõe de uma vasta gama de rótulos nacionais e internacionais, a empresa emprega seis funcionários distribuídos entre administração, 
         estoque e vendas. Tanto os proprietários quanto seus três vendedores são profundos conhecedores do mundo dos vinhos, utilizando esse saber no atendimento aos clientes. 
-        Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da vinheria.</h2>
-        <h2 style="text-align: left;">Cadastro de Usuário</h2>
-        
-        <div class="campo">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome">
+        Essa troca de conhecimento, com caráter de consultoria, é um dos principais pontos fortes da vinheria.</p>
         </div>
+    </header>
+   
+    <main>
+        <!-- Lado Esquerdo: Imagem da Empresa -->
+        <section class="image-container">
+            <!-- Substitua 'sua-imagem.jpg' pelo nome real do seu arquivo de imagem -->
+            <img src="src/assets/imagemvinharia.jpg" alt="Imagem da Vinharia">
+            <!-- <p>[ IMAGEM DA EMPRESA AQUI ]</p> -->
+        </section>
 
-        <div class="campo">
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
-        </div>
+        <!-- Lado Direito: Box de Cadastro -->
+        <section class="registration-box">
+            <h2>Cadastro de Usuário</h2>
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
 
-        <div class="campo">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="seuemail@provedor.com">
-        </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                </div>
 
-        <button id="meuBotao">Iniciar Cadastro</button>
-    </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder= "seuemail@provedor.com" required>
+                </div>
 
-    <div id="pagina2" style="display: none;">
-    <h2> Cadastro Concluído e Atualização do Produto Realizada, <span id="campoName"></span>!</h2>
-    
-    <p><strong>Usuário:</strong> <span id="campoName"></span></p>
-    <hr>
-    <h3>Dados do Vinho:</h3>
-    <p><strong>Nome do vinho:</strong> <span id="campoProduto"></span></p>
-    <p><strong>Tipo:</strong> <span id="campoTipo"></span></p>
-    <p><strong>Safra:</strong> <span id="campoSafra"></span></p>
-    <p><strong>Estoque Atual:</strong> <span id="campoEstoque"></span> unidade(s)</p>
-</div>
-    <script src="src/src/js/script.js"></script>
+                <button type="submit" class="btn-submit">Iniciar Cadastro</button>
+            </form>
+        </section>
+
+
+        </section>
+    </main>
+    <script src="src/js/script.js"></script>
 </body>
 </html>

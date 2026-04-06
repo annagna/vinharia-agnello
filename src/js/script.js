@@ -1,9 +1,9 @@
 // 1. Primeiro declaramos o botão que está no HTML
-const botao = document.getElementById("meuBotao");
+const botao = document.getElementById('cadastroForm');
 
 // 2. Adicionamos um único evento de clique
-botao.addEventListener("click", function () {
-    
+botao.addEventListener('submit', function (event) {
+    event.preventDefault();
     // ETAPA 1: Pegar os dados do formulário HTML
     const nome = document.getElementById("nome").value.trim();
     const sobrenome = document.getElementById("sobrenome").value.trim();
@@ -25,8 +25,8 @@ botao.addEventListener("click", function () {
 
 
     // ETAPA 2: Solicitar as informações do produto via prompt
-    const nomeProduto = prompt("Digite o nome do produto comercial:");
-    const tipoProduto = prompt("Digite o tipo do produto:");
+    const nomeProduto = prompt("Digite o nome do vinho:");
+    const tipoProduto = prompt("Digite o tipo do vinho(Tinto, Branco, Rosé):");
     const safraOuAno = prompt("Digite a safra ou ano de fabricação:");
     const quantidade = prompt("Digite a quantidade em estoque:");
 
@@ -37,7 +37,7 @@ botao.addEventListener("click", function () {
     }
 
     // Alerta antes de exibir no console
-    alert("A seguir, veja os detalhes do produto no console.");
+    alert("A seguir, veja os detalhes do vinho no console.");
 
 
     // ETAPA 3: Exibindo tudo no console de forma organizada
@@ -55,12 +55,13 @@ botao.addEventListener("click", function () {
     console.log(`📅 Ano/Safra:   ${safraOuAno}`);
     console.log(`📦 Estoque:     ${quantidade} unidade(s)`);
     console.log("==============================");
-    document.getElementById("pagina1").style.display = "none";
-    document.getElementById("pagina2").style.display = "block";
+
+    // document.getElementById("pagina1").style.display = "none";
+    // document.getElementById("pagina2").style.display = "block";
 
     // ETAPA: Empurrando as informações para a página 2
-    document.getElementById("campoNome").textContent = nome + " " + sobrenome;
-    document.getElementById("campoProduto").textContent = nomeProduto;
-    document.getElementById("campoTipo").textContent = tipoProduto;
-    document.getElementById("campoEstoque").textContent = quantidade;
+    // document.getElementById("campoNome").textContent = nome + " " + sobrenome;
+    // document.getElementById("campoProduto").textContent = nomeProduto;
+    // document.getElementById("campoTipo").textContent = tipoProduto;
+    // document.getElementById("campoEstoque").textContent = quantidade;
 });
