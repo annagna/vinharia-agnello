@@ -3,47 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro e Interação</title>
+
+    <title>Site da Vinhearia Agnello</title>
     <style>
-        /* Um CSS básico só para simular o efeito de troca de páginas */
-        #pagina2 {
-            display: none; /* Começa escondida */
+        /* Estilo básico para organizar a visualização */
+        body {
+            font-family: sans-serif;
+            padding: 0px;
+            margin: 0px;
         }
-        button {
-            margin: 5px;
-            padding: 8px 15px;
-            cursor: pointer;
+        .campo {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
         }
         input {
-            display: block;
-            margin-bottom: 10px;
-            padding: 5px;
+            padding: 8px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
         }
     </style>
+    <link rel="stylesheet" href="src/src/css/style.css">
 </head>
 <body>
-
+    <h1 style="text-align: center;">Vinheria Agnello!</h1>
     <div id="pagina1">
-        <h2>Cadastro</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
+        <h2 style="text-align: left;">Cadastro de Usuário</h2>
+        
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
 
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+        <div class="campo">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+        </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" placeholder="exemplo@email.com">
+        <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="seuemail@provedor.com">
+        </div>
 
-        <button id="meuBotao">Cadastrar</button>
+        <button id="meuBotao">Iniciar Cadastro</button>
     </div>
 
-    <div id="pagina2">
-        <h2>Área do Usuário</h2>
-        <p>Clique nos botões abaixo para interagir:</p>
-        
-        <div id="botoes"></div>
-
-
-    <script src="src/js/script.js"></script>
+    <div id="pagina2" style="display: none;">
+    <h2> Cadastro Concluído e Atualização do Produto Realizada, <span id="campoName"></span>!</h2>
+    
+    <p><strong>Usuário:</strong> <span id="campoName"></span></p>
+    <hr>
+    <h3>Dados do Vinho:</h3>
+    <p><strong>Nome do vinho:</strong> <span id="campoProduto"></span></p>
+    <p><strong>Tipo:</strong> <span id="campoTipo"></span></p>
+    <p><strong>Safra:</strong> <span id="campoSafra"></span></p>
+    <p><strong>Estoque Atual:</strong> <span id="campoEstoque"></span> unidade(s)</p>
+</div>
+    <script src="src/src/js/script.js"></script>
 </body>
 </html>
