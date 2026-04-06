@@ -56,12 +56,4 @@ botao.addEventListener('submit', function (event) {
     console.log(`📦 Estoque:     ${quantidade} unidade(s)`);
     console.log("==============================");
 
-    // document.getElementById("pagina1").style.display = "none";
-    // document.getElementById("pagina2").style.display = "block";
-
-    // ETAPA: Empurrando as informações para a página 2
-    // document.getElementById("campoNome").textContent = nome + " " + sobrenome;
-    // document.getElementById("campoProduto").textContent = nomeProduto;
-    // document.getElementById("campoTipo").textContent = tipoProduto;
-    // document.getElementById("campoEstoque").textContent = quantidade;
 });
